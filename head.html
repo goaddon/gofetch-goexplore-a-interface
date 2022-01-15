@@ -1,0 +1,14 @@
+<script>
+  document.addEventListener("turbo:load", function() {
+    var u = "https://{{ project.addon_data.addon_5b9ff6463ab42f43522b30cf.url }}/session_api/v1/assets/script";
+    if (document.querySelector('script[src="' + u + '"]') === null) {
+      var s = document.createElement('script');
+      s.type = 'text/javascript';
+      s.async = true;
+      s.src = u;
+      document.head.appendChild(s);
+    } else {
+      runGf();
+    }
+  });
+</script>
